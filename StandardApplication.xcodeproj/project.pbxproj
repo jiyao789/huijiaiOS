@@ -420,6 +420,7 @@
 		03B91A542815257800CEAEF8 /* AppointSeeHouseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B91A532815257800CEAEF8 /* AppointSeeHouseView.m */; };
 		03B91A562815258400CEAEF8 /* AppointSeeHouseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B91A552815258400CEAEF8 /* AppointSeeHouseView.xib */; };
 		03B91A592815471300CEAEF8 /* PhoneInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B91A582815471200CEAEF8 /* PhoneInfoModel.m */; };
+		03BA20261117000300CEAEF3 /* AgreementUpdateAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BA20261117000200CEAEF2 /* AgreementUpdateAlertView.m */; };
 		03B91A5C2815524D00CEAEF8 /* ContractWarnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B91A5B2815524D00CEAEF8 /* ContractWarnView.m */; };
 		03B91A5E2815525D00CEAEF8 /* ContractWarnView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B91A5D2815525D00CEAEF8 /* ContractWarnView.xib */; };
 		03B91A6128155BD300CEAEF8 /* NoticeShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B91A6028155BD300CEAEF8 /* NoticeShowView.m */; };
@@ -1348,6 +1349,8 @@
 		03B91A552815258400CEAEF8 /* AppointSeeHouseView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppointSeeHouseView.xib; sourceTree = "<group>"; };
 		03B91A572815471200CEAEF8 /* PhoneInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneInfoModel.h; sourceTree = "<group>"; };
 		03B91A582815471200CEAEF8 /* PhoneInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneInfoModel.m; sourceTree = "<group>"; };
+		03BA20261117000100CEAEF1 /* AgreementUpdateAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AgreementUpdateAlertView.h; sourceTree = "<group>"; };
+		03BA20261117000200CEAEF2 /* AgreementUpdateAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgreementUpdateAlertView.m; sourceTree = "<group>"; };
 		03B91A5A2815524D00CEAEF8 /* ContractWarnView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContractWarnView.h; sourceTree = "<group>"; };
 		03B91A5B2815524D00CEAEF8 /* ContractWarnView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContractWarnView.m; sourceTree = "<group>"; };
 		03B91A5D2815525D00CEAEF8 /* ContractWarnView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContractWarnView.xib; sourceTree = "<group>"; };
@@ -2138,6 +2141,8 @@
 				037A1F162723A18300440CBF /* PublicHouse */,
 				03E01419272020C1007A6520 /* Home */,
 				03E0141A2720211A007A6520 /* HouseSearch */,
+				03BA20261117000100CEAEF1 /* AgreementUpdateAlertView.h */,
+				03BA20261117000200CEAEF2 /* AgreementUpdateAlertView.m */,
 				03B91A5A2815524D00CEAEF8 /* ContractWarnView.h */,
 				03B91A5B2815524D00CEAEF8 /* ContractWarnView.m */,
 				03B91A5D2815525D00CEAEF8 /* ContractWarnView.xib */,
@@ -4191,6 +4196,7 @@
 				035669122BB7D905007A8709 /* BigHouseModel.m in Sources */,
 				03E01403272008CC007A6520 /* RegionTableViewCell.m in Sources */,
 				E5D8B61623D05D8400BF99E3 /* UIView+SDExtension.m in Sources */,
+				03BA20261117000300CEAEF3 /* AgreementUpdateAlertView.m in Sources */,
 				03B91A5C2815524D00CEAEF8 /* ContractWarnView.m in Sources */,
 				0350CACB24AF22D800B8E909 /* DetailTableViewController.m in Sources */,
 				0350CAC824AF22D800B8E909 /* AudioDataQueue.cpp in Sources */,
@@ -4731,7 +4737,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/StandardApplication/Libs/BDSClient/BDSClientLib",
 				);
-				MARKETING_VERSION = 3.1.9;
+				MARKETING_VERSION = 3.1.10;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -4899,7 +4905,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/StandardApplication/Libs/BDSClient/BDSClientLib",
 				);
-				MARKETING_VERSION = 3.1.9;
+				MARKETING_VERSION = 3.1.10;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

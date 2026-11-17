@@ -22,6 +22,9 @@
 #import "HomeHeaderNatureView.h"
 #import "BigHouseModel.h"
 #import "HomeTableViewCell.h"
+#import "AgreementUpdateAlertView.h"
+#import "ProtocolBaseWKWebViewController.h"
+#import "BaseNavigationViewController.h"
 
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *homeTableView;
@@ -97,7 +100,7 @@
 {
     [super viewDidAppear:animated];
 
-//    if (_nature != 3) {
+    [self checkAgreementUpdateAlert];
 //        self.pageIndex = 1;
 //        [self getUnitIndexDate];
 //    }
@@ -415,6 +418,7 @@
 - (void)getAppMessagePopupDate
 {
     if (IsStrEmpty([User shareUser].token)) {
+        [self checkAgreementUpdateAlert];
         return;
     }
     [HttpRequest requestArrUrlPath:BaseURL urlPath:appMessage_popupURL parameters:@{} type:HttpRequestTypeGet result:^(NSArray * _Nonnull arr, NSInteger status, NSString * _Nonnull msg) {
@@ -427,6 +431,7 @@
                 }
             }
         }
+        [self checkAgreementUpdateAlert];
     }];
 }
 
@@ -441,8 +446,10 @@
         contractWarnView.frame = CGRectMake(0, 0, 300, 350);
     }
     ScottAlertViewController *alertController = [ScottAlertViewController alertControllerWithAlertView:contractWarnView preferredStyle:ScottAlertControllerStyleAlert transitionAnimationStyle:ScottAlertTransitionStyleFade];
+    KWeakSelf
     contractWarnView.didCancelBlock = ^{
         [alertController dismissViewControllerAnimated:YES];
+        [weakSelf checkAgreementUpdateAlert];
     };
     alertController.tapBackgroundDismissEnable = NO;
     [self presentViewController:alertController animated:YES completion:nil];
@@ -526,6 +533,86 @@
         _houseListArr = [NSMutableArray array];
     }
     return _houseListArr;
+}
+
+static NSString * const kAgreementUpdateShownVersionKey = @"kAgreementUpdateShownVersionKey";
+
+#pragma mark - 协议更新提醒弹窗（严格仅限首页触发）
+
+- (void)checkAgreementUpdateAlert
+{
+    // 1. 必须为登录用户状态
+    if (IsStrEmpty([User shareUser].token)) {
+        return;
+    }
+    
+    // 2. 如果当前已有模态弹出层，避免层叠冲突
+    if (self.presentedViewController != nil) {
+        return;
+    }
+    
+    NSString *currentVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    if (IsStrEmpty(currentVersion)) {
+        currentVersion = @"3.1.10";
+    }
+    
+    NSString *shownVersion = [[NSUserDefaults standardUserDefaults] stringForKey:kAgreementUpdateShownVersionKey];
+    // 如果已记录的版本号大于或等于当前版本，说明已在此版本弹窗确认过，不再重复弹出
+    if (shownVersion && [shownVersion compare:currentVersion options:NSNumericSearch] != NSOrderedAscending) {
+        return;
+    }
+    
+    [self showAgreementUpdateAlertView:currentVersion];
+}
+
+- (void)showAgreementUpdateAlertView:(NSString *)currentVersion
+{
+    AgreementUpdateAlertView *alertView = [AgreementUpdateAlertView alertView];
+    ScottAlertViewController *alertController = [ScottAlertViewController alertControllerWithAlertView:alertView preferredStyle:ScottAlertControllerStyleAlert transitionAnimationStyle:ScottAlertTransitionStyleFade];
+    alertController.tapBackgroundDismissEnable = NO; // 禁止点击半透明背景关闭
+    
+    KWeakSelf
+    __weak typeof(alertController) weakAlert = alertController;
+    
+    // 强交互约束：必须强制点击“知道了”方可关闭
+    alertView.confirmBlock = ^{
+        [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:kAgreementUpdateShownVersionKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [weakAlert dismissViewControllerAnimated:YES];
+    };
+    
+    // 用户协议跳转（腾讯文档最新地址直连秒开）
+    alertView.userAgreementClickBlock = ^{
+        KStrongSelf(weakSelf)
+        [strongSelf openAgreementDocWithTitle:@"用户协议" url:@"https://docs.qq.com/doc/DTWRuVG9hSWJvY0J5" alertController:weakAlert];
+    };
+    
+    // 隐私政策跳转（与登录页跳转体验统一）
+    alertView.privacyClickBlock = ^{
+        KStrongSelf(weakSelf)
+        [MBProgressHUD showStatus:nil toView:strongSelf.view];
+        [HttpRequest requestNewsInfoData:@"11" result:^(NewsInfoModel * _Nonnull model, NSString * _Nonnull msg) {
+            [MBProgressHUD dismissHUDForView:strongSelf.view];
+            NSString *fileUrl = (!IsNilOrNull(model) && !IsStrEmpty(model.file_url)) ? model.file_url : @"https://docs.qq.com/doc/DTXBETHdGYnBUREpL";
+            [strongSelf openAgreementDocWithTitle:@"隐私政策" url:fileUrl alertController:weakAlert];
+        }];
+    };
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+- (void)openAgreementDocWithTitle:(NSString *)title url:(NSString *)url alertController:(UIViewController *)alertController
+{
+    ProtocolBaseWKWebViewController *webVc = [[ProtocolBaseWKWebViewController alloc] init];
+    webVc.webTitle = title;
+    webVc.webUrl = url;
+    BaseNavigationViewController *nav = [[BaseNavigationViewController alloc] initWithRootViewController:webVc];
+    nav.modalPresentationStyle = UIModalPresentationFullScreen;
+    if (alertController && alertController.presentingViewController) {
+        [alertController presentViewController:nav animated:YES completion:nil];
+    } else {
+        [self presentViewController:nav animated:YES completion:nil];
+    }
 }
 
 @end

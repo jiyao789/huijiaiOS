@@ -43,8 +43,7 @@
     
     KWeakSelf
     [_userInfoLab whenTapped:^{
-        
-        [weakSelf pushProtocalInfo:@"10"];
+        [weakSelf pushUserAgreement];
     }];
     
     [_privacyInfoLab whenTapped:^{
@@ -54,6 +53,14 @@
     struct utsname systemInfo;
     uname(&systemInfo);
     _platformString = [NSString stringWithCString:systemInfo.machine encoding:NSASCIIStringEncoding];
+}
+
+- (void)pushUserAgreement
+{
+    ProtocolBaseWKWebViewController *webVc = [[ProtocolBaseWKWebViewController alloc] init];
+    webVc.webTitle = @"用户协议";
+    webVc.webUrl = @"https://docs.qq.com/doc/DTWRuVG9hSWJvY0J5";
+    [self.navigationController pushViewController:webVc animated:YES];
 }
 
 - (void)pushProtocalInfo:(NSString *)type
@@ -77,7 +84,7 @@
         return;
     }
     if (!_checkProtocal) { 
-        [MBProgressHUD showMessag:@"获取验证码，请先阅读并同意《隐私政策》和《用户协议》" toView:self.view];
+        [MBProgressHUD showMessag:@"获取验证码，请先阅读并同意《用户协议》与《隐私政策》" toView:self.view];
         return; 
     }
     [MBProgressHUD showStatus:nil toView:self.view];
@@ -143,7 +150,7 @@
 //        return;
 //    }
     if (!_checkProtocal) {
-        [MBProgressHUD showMessag:@"登录憓家app，请先阅读并同意《隐私政策》和《用户协议》" toView:self.view];
+        [MBProgressHUD showMessag:@"登录憓家app，请先阅读并同意《用户协议》与《隐私政策》" toView:self.view];
         return;
     }
     NSString *urlStr = _changeIndex == 1 ? login_appURL : login_pwdURL;
