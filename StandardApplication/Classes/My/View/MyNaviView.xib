@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MyNaviView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szg-0K-1Q7" customClass="QMUIButton">
+                    <rect key="frame" x="373" y="5" width="20" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="DRQ-11-owf"/>
+                        <constraint firstAttribute="width" constant="20" id="Wm5-9B-xFm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="my_message_img">
+                        <color key="titleColor" red="0.054901960780000002" green="0.1843137255" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="messageBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="9uT-tm-6VC"/>
+                    </connections>
+                </button>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4s-4u-So0">
+                    <rect key="frame" x="383" y="0.0" width="0.0" height="14"/>
+                    <color key="backgroundColor" red="0.67843137249999996" green="0.1176470588" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="GO0-ZC-cpq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="7"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="szg-0K-1Q7" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="RIE-jE-43u"/>
+                <constraint firstAttribute="trailing" secondItem="szg-0K-1Q7" secondAttribute="trailing" constant="21" id="SjT-oH-xcW"/>
+                <constraint firstItem="w4s-4u-So0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Yxx-65-BPQ"/>
+                <constraint firstItem="w4s-4u-So0" firstAttribute="leading" secondItem="szg-0K-1Q7" secondAttribute="trailing" constant="-10" id="pHm-ud-N2n"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="messageBtn" destination="szg-0K-1Q7" id="bNF-W1-hib"/>
+                <outlet property="noReadLab" destination="w4s-4u-So0" id="xEx-pL-NjM"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="82"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="my_message_img" width="18" height="18"/>
+    </resources>
+</document>

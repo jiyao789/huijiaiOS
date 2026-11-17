@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="LifeFoundCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="180"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="180"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jt0-1T-lod">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="180"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BTZ-M0-HhR">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="180"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rTN-f0-Dv7">
+                                <rect key="frame" x="0.0" y="137" width="300" height="43"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KtF-sZ-DU0" customClass="ChangeSpaceLabel">
+                                        <rect key="frame" x="15" y="12" width="270" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="KtF-sZ-DU0" firstAttribute="centerY" secondItem="rTN-f0-Dv7" secondAttribute="centerY" id="CoG-yE-jOc"/>
+                                    <constraint firstItem="KtF-sZ-DU0" firstAttribute="leading" secondItem="rTN-f0-Dv7" secondAttribute="leading" constant="15" id="ZiC-qd-jaV"/>
+                                    <constraint firstAttribute="height" constant="43" id="ZrM-m0-awU"/>
+                                    <constraint firstAttribute="trailing" secondItem="KtF-sZ-DU0" secondAttribute="trailing" constant="15" id="jSN-uq-s97"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BTZ-M0-HhR" secondAttribute="trailing" id="CaK-Wx-qIC"/>
+                            <constraint firstItem="rTN-f0-Dv7" firstAttribute="leading" secondItem="Jt0-1T-lod" secondAttribute="leading" id="D7Q-mA-See"/>
+                            <constraint firstItem="BTZ-M0-HhR" firstAttribute="leading" secondItem="Jt0-1T-lod" secondAttribute="leading" id="Mtc-vg-5OO"/>
+                            <constraint firstAttribute="bottom" secondItem="BTZ-M0-HhR" secondAttribute="bottom" id="XBw-aL-hIg"/>
+                            <constraint firstItem="BTZ-M0-HhR" firstAttribute="top" secondItem="Jt0-1T-lod" secondAttribute="top" id="YQe-8C-eZX"/>
+                            <constraint firstAttribute="bottom" secondItem="rTN-f0-Dv7" secondAttribute="bottom" id="sOb-0s-v0V"/>
+                            <constraint firstAttribute="trailing" secondItem="rTN-f0-Dv7" secondAttribute="trailing" id="wwp-5C-FWx"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Jt0-1T-lod" secondAttribute="trailing" id="27z-gL-sun"/>
+                <constraint firstAttribute="bottom" secondItem="Jt0-1T-lod" secondAttribute="bottom" id="6aI-xH-EVu"/>
+                <constraint firstItem="Jt0-1T-lod" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="DWM-LH-s9F"/>
+                <constraint firstItem="Jt0-1T-lod" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="s2S-3k-WS7"/>
+            </constraints>
+            <size key="customSize" width="300" height="158"/>
+            <connections>
+                <outlet property="bgView" destination="rTN-f0-Dv7" id="bhl-Fr-O2v"/>
+                <outlet property="contentLab" destination="KtF-sZ-DU0" id="PtL-Bq-6V2"/>
+                <outlet property="lifeImageView" destination="BTZ-M0-HhR" id="eht-qv-zFZ"/>
+            </connections>
+            <point key="canvasLocation" x="318.84057971014494" y="135.9375"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

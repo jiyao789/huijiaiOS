@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SearchNaviView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5S-Br-qJs" customClass="QMUIButton">
+                    <rect key="frame" x="20" y="7" width="20" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="IK1-wk-eXT"/>
+                        <constraint firstAttribute="width" constant="20" id="W1s-Nr-gtM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="返回" image="black_pop_img">
+                        <color key="titleColor" red="0.054901960780000002" green="0.1843137255" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="searchBackBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="m08-rg-biC"/>
+                    </connections>
+                </button>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbF-0H-J5t">
+                    <rect key="frame" x="366" y="7" width="38" height="30"/>
+                    <color key="backgroundColor" red="0.16470588235294117" green="0.38431372549019605" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="38" id="M7j-L9-UMb"/>
+                        <constraint firstAttribute="height" constant="30" id="yun-SX-HXr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="搜索">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="searchBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="vFd-kk-aPh"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxx-4a-E0N" customClass="BaseShadowView">
+                    <rect key="frame" x="59" y="7" width="296" height="30"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_search_img" translatesAutoresizingMaskIntoConstraints="NO" id="YFt-ss-BXh">
+                            <rect key="frame" x="12" y="8" width="14" height="14"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="14" id="VNX-46-2Mt"/>
+                                <constraint firstAttribute="height" constant="14" id="hhm-hK-uZA"/>
+                            </constraints>
+                        </imageView>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="小区名/路名、模糊搜索" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hph-x0-Y19">
+                            <rect key="frame" x="39" y="0.0" width="244" height="30"/>
+                            <color key="textColor" red="0.015686274510000001" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            <connections>
+                                <action selector="textFieldEditChanged:" destination="iN0-l3-epB" eventType="editingChanged" id="XvI-3a-T3f"/>
+                                <outlet property="delegate" destination="-1" id="4aT-0p-9lP"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="hph-x0-Y19" firstAttribute="top" secondItem="qxx-4a-E0N" secondAttribute="top" id="1Wb-TY-dMw"/>
+                        <constraint firstItem="YFt-ss-BXh" firstAttribute="centerY" secondItem="qxx-4a-E0N" secondAttribute="centerY" id="MhG-AT-Nnn"/>
+                        <constraint firstItem="YFt-ss-BXh" firstAttribute="leading" secondItem="qxx-4a-E0N" secondAttribute="leading" constant="12" id="ObZ-Xo-oea"/>
+                        <constraint firstItem="hph-x0-Y19" firstAttribute="leading" secondItem="YFt-ss-BXh" secondAttribute="trailing" constant="13" id="S1I-sO-znW"/>
+                        <constraint firstAttribute="trailing" secondItem="hph-x0-Y19" secondAttribute="trailing" constant="13" id="gA8-aS-ZC7"/>
+                        <constraint firstAttribute="bottom" secondItem="hph-x0-Y19" secondAttribute="bottom" id="q2E-Rw-VuQ"/>
+                        <constraint firstAttribute="height" constant="30" id="zyr-dv-rop"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="z5S-Br-qJs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="G6F-DA-Z0g"/>
+                <constraint firstItem="ZbF-0H-J5t" firstAttribute="centerY" secondItem="z5S-Br-qJs" secondAttribute="centerY" id="GsI-AJ-3OM"/>
+                <constraint firstAttribute="trailing" secondItem="ZbF-0H-J5t" secondAttribute="trailing" constant="10" id="I3U-Lj-RSa"/>
+                <constraint firstItem="ZbF-0H-J5t" firstAttribute="leading" secondItem="qxx-4a-E0N" secondAttribute="trailing" constant="11" id="J74-e5-i8o"/>
+                <constraint firstItem="qxx-4a-E0N" firstAttribute="leading" secondItem="z5S-Br-qJs" secondAttribute="trailing" constant="19" id="KgS-c5-fSW"/>
+                <constraint firstItem="z5S-Br-qJs" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="OgT-im-Yvq"/>
+                <constraint firstItem="qxx-4a-E0N" firstAttribute="centerY" secondItem="z5S-Br-qJs" secondAttribute="centerY" id="a46-rt-gj2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="searchBackBtn" destination="z5S-Br-qJs" id="7j4-43-qmw"/>
+                <outlet property="searchTextField" destination="hph-x0-Y19" id="kOd-Dk-1Qp"/>
+                <outlet property="searchView" destination="qxx-4a-E0N" id="D2b-N6-5sY"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="120"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="black_pop_img" width="15" height="12.666666984558105"/>
+        <image name="home_search_img" width="13" height="13.666666984558105"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

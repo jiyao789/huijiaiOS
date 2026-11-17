@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="RechargeRecodeTitleTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t2G-Ja-hJQ">
+                        <rect key="frame" x="319" y="0.0" width="1" height="46"/>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="7La-yp-x6x"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDr-5b-QFe">
+                        <rect key="frame" x="0.0" y="0.0" width="319" height="45"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.22352941179999999" green="0.23921568630000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="emR-6B-9Io">
+                        <rect key="frame" x="0.0" y="45" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="0HQ-9a-W8n"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="t2G-Ja-hJQ" secondAttribute="bottom" id="90g-Kt-mAt"/>
+                    <constraint firstAttribute="trailing" secondItem="t2G-Ja-hJQ" secondAttribute="trailing" id="EOb-Fk-y8Z"/>
+                    <constraint firstItem="QDr-5b-QFe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="JWD-zm-NcC"/>
+                    <constraint firstItem="QDr-5b-QFe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Joq-rc-zbS"/>
+                    <constraint firstItem="emR-6B-9Io" firstAttribute="top" secondItem="QDr-5b-QFe" secondAttribute="bottom" id="Pe0-2x-ex7"/>
+                    <constraint firstItem="t2G-Ja-hJQ" firstAttribute="leading" secondItem="QDr-5b-QFe" secondAttribute="trailing" id="RQS-dw-RV9"/>
+                    <constraint firstAttribute="bottom" secondItem="emR-6B-9Io" secondAttribute="bottom" id="Zkb-OZ-Gqk"/>
+                    <constraint firstItem="emR-6B-9Io" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="c65-KQ-j8e"/>
+                    <constraint firstAttribute="trailing" secondItem="emR-6B-9Io" secondAttribute="trailing" id="eQL-yn-MaG"/>
+                    <constraint firstItem="t2G-Ja-hJQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="uws-Vg-gLJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="rechargeTimeLab" destination="QDr-5b-QFe" id="aJO-Tw-cPa"/>
+            </connections>
+            <point key="canvasLocation" x="-29" y="21"/>
+        </tableViewCell>
+    </objects>
+</document>

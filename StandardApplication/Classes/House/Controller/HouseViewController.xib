@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HouseViewController">
+            <connections>
+                <outlet property="chooseClassifyView" destination="S7y-y4-qTJ" id="0N9-Ib-b4n"/>
+                <outlet property="headerTableView" destination="mft-C6-lfI" id="naM-ef-u6C"/>
+                <outlet property="houseMapImageView" destination="ySl-KU-BpH" id="ol4-M2-H1b"/>
+                <outlet property="houseTableView" destination="5UE-yJ-gyb" id="bs3-Ap-Dyq"/>
+                <outlet property="mapView" destination="xeB-Jd-uhv" id="neb-Ep-HRs"/>
+                <outlet property="searchBgView" destination="Dkh-bZ-LXv" id="Hrm-JS-jjy"/>
+                <outlet property="searchBgViewLayoutHeight" destination="1uJ-6B-4XO" id="j3I-Qa-3yq"/>
+                <outlet property="searchSelectViewLayoutTop" destination="xS8-ew-PgC" id="VUo-pb-Olp"/>
+                <outlet property="searchView" destination="dLH-hP-LZl" id="jdB-hI-clA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewLayoutHeight" destination="kzw-pq-7x4" id="48F-NE-JVz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5UE-yJ-gyb">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="UOn-gQ-gvc"/>
+                        <outlet property="delegate" destination="-1" id="vD5-yu-kgl"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dkh-bZ-LXv">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="146"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FhV-YI-nfg">
+                            <rect key="frame" x="12" y="44" width="390" height="102"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLH-hP-LZl">
+                                    <rect key="frame" x="8" y="10" width="374" height="44"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPX-hC-Hyc">
+                                            <rect key="frame" x="16" y="13.666666666666671" width="43" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house_search_icon" translatesAutoresizingMaskIntoConstraints="NO" id="N7K-FM-5JD">
+                                            <rect key="frame" x="338" y="11" width="22" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="22" id="0Un-eP-ZN9"/>
+                                                <constraint firstAttribute="width" constant="22" id="m3d-Mi-A1Z"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="rPX-hC-Hyc" firstAttribute="leading" secondItem="dLH-hP-LZl" secondAttribute="leading" constant="16" id="1Fg-y0-x1W"/>
+                                        <constraint firstAttribute="height" constant="44" id="5fP-eb-cwK"/>
+                                        <constraint firstItem="N7K-FM-5JD" firstAttribute="centerY" secondItem="dLH-hP-LZl" secondAttribute="centerY" id="GSO-uK-k4P"/>
+                                        <constraint firstItem="rPX-hC-Hyc" firstAttribute="centerY" secondItem="dLH-hP-LZl" secondAttribute="centerY" id="GyK-rj-qdA"/>
+                                        <constraint firstAttribute="trailing" secondItem="N7K-FM-5JD" secondAttribute="trailing" constant="14" id="usl-5b-AR0"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S7y-y4-qTJ" customClass="ChooseClassifyView">
+                                    <rect key="frame" x="0.0" y="58" width="390" height="40"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="S7y-y4-qTJ" firstAttribute="leading" secondItem="FhV-YI-nfg" secondAttribute="leading" id="D3j-00-Ncg"/>
+                                <constraint firstAttribute="trailing" secondItem="S7y-y4-qTJ" secondAttribute="trailing" id="GOk-1R-3ou"/>
+                                <constraint firstItem="dLH-hP-LZl" firstAttribute="leading" secondItem="FhV-YI-nfg" secondAttribute="leading" constant="8" id="Lsl-GY-CGc"/>
+                                <constraint firstAttribute="bottom" secondItem="S7y-y4-qTJ" secondAttribute="bottom" constant="4" id="Qhx-aE-33p"/>
+                                <constraint firstAttribute="trailing" secondItem="dLH-hP-LZl" secondAttribute="trailing" constant="8" id="cwj-V3-KZo"/>
+                                <constraint firstItem="dLH-hP-LZl" firstAttribute="top" secondItem="FhV-YI-nfg" secondAttribute="top" constant="10" id="ibj-95-Zr2"/>
+                                <constraint firstAttribute="height" constant="102" id="kzw-pq-7x4"/>
+                                <constraint firstItem="S7y-y4-qTJ" firstAttribute="top" secondItem="dLH-hP-LZl" secondAttribute="bottom" constant="4" id="q7j-cc-Pmb"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="146" id="1uJ-6B-4XO"/>
+                        <constraint firstAttribute="trailing" secondItem="FhV-YI-nfg" secondAttribute="trailing" constant="12" id="L3a-vu-Fuq"/>
+                        <constraint firstItem="FhV-YI-nfg" firstAttribute="leading" secondItem="Dkh-bZ-LXv" secondAttribute="leading" constant="12" id="bcJ-NO-QYk"/>
+                        <constraint firstItem="FhV-YI-nfg" firstAttribute="top" secondItem="Dkh-bZ-LXv" secondAttribute="top" constant="44" id="xS8-ew-PgC"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="5UE-yJ-gyb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="45S-jx-HNC"/>
+                <constraint firstAttribute="bottom" secondItem="5UE-yJ-gyb" secondAttribute="bottom" id="9Ex-ST-Ui6"/>
+                <constraint firstAttribute="trailing" secondItem="Dkh-bZ-LXv" secondAttribute="trailing" id="PMT-P1-dxI"/>
+                <constraint firstItem="Dkh-bZ-LXv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Pi4-Wg-rXw"/>
+                <constraint firstItem="5UE-yJ-gyb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aww-i5-7g4"/>
+                <constraint firstAttribute="trailing" secondItem="5UE-yJ-gyb" secondAttribute="trailing" id="dod-3G-gn4"/>
+                <constraint firstItem="Dkh-bZ-LXv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gK7-de-1zm"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="120.65217391304348"/>
+        </view>
+        <view contentMode="scaleToFill" id="mft-C6-lfI">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="330"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xeB-Jd-uhv" customClass="MAMapView">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="330"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house_map_img" translatesAutoresizingMaskIntoConstraints="NO" id="ySl-KU-BpH">
+                    <rect key="frame" x="287" y="249" width="120" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="697-Om-kB7"/>
+                        <constraint firstAttribute="width" constant="120" id="vQh-I7-EzD"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="xeB-Jd-uhv" secondAttribute="trailing" id="FK3-jQ-ffA"/>
+                <constraint firstItem="xeB-Jd-uhv" firstAttribute="top" secondItem="mft-C6-lfI" secondAttribute="top" id="RFe-uJ-TQ3"/>
+                <constraint firstAttribute="bottom" secondItem="xeB-Jd-uhv" secondAttribute="bottom" id="aw5-pl-8sz"/>
+                <constraint firstAttribute="trailing" secondItem="ySl-KU-BpH" secondAttribute="trailing" constant="7" id="jOg-fP-3zq"/>
+                <constraint firstItem="xeB-Jd-uhv" firstAttribute="leading" secondItem="mft-C6-lfI" secondAttribute="leading" id="nBn-hm-xgl"/>
+                <constraint firstAttribute="bottom" secondItem="ySl-KU-BpH" secondAttribute="bottom" constant="39" id="pPi-Je-Ce4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="874" y="121"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="house_map_img" width="120" height="42"/>
+        <image name="house_search_icon" width="22" height="22"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

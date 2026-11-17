@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewWaitViewController">
+            <connections>
+                <outlet property="chooseClassifyView" destination="xdK-Q3-9W6" id="gI7-F5-9Bg"/>
+                <outlet property="chooseClassifyViewLayoutHeight" destination="FKz-Dg-0zu" id="edd-wc-iNh"/>
+                <outlet property="chooseClassifyViewLayoutTop" destination="GA7-i5-mHU" id="tHY-cP-OX7"/>
+                <outlet property="houseTableView" destination="gfT-Sr-o7W" id="S2h-N0-u1n"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xdK-Q3-9W6" customClass="ChooseClassifyView">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="FKz-Dg-0zu"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gfT-Sr-o7W">
+                    <rect key="frame" x="0.0" y="60" width="414" height="676"/>
+                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="jNx-r5-IpA"/>
+                        <outlet property="delegate" destination="-1" id="XRh-Yz-5lt"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="gfT-Sr-o7W" firstAttribute="top" secondItem="xdK-Q3-9W6" secondAttribute="bottom" id="8hf-Rj-bbS"/>
+                <constraint firstItem="xdK-Q3-9W6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GA7-i5-mHU"/>
+                <constraint firstAttribute="trailing" secondItem="xdK-Q3-9W6" secondAttribute="trailing" id="ShA-RB-nBB"/>
+                <constraint firstAttribute="bottom" secondItem="gfT-Sr-o7W" secondAttribute="bottom" id="WWi-kW-tO4"/>
+                <constraint firstItem="gfT-Sr-o7W" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="axr-AV-PeQ"/>
+                <constraint firstAttribute="trailing" secondItem="gfT-Sr-o7W" secondAttribute="trailing" id="ehc-I3-TPU"/>
+                <constraint firstItem="xdK-Q3-9W6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="f28-nf-Cn0"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

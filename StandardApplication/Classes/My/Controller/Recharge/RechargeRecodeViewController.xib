@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RechargeRecodeViewController">
+            <connections>
+                <outlet property="bgView" destination="jPf-eZ-nNf" id="035-Re-42K"/>
+                <outlet property="recodeScrollView" destination="2UL-8l-UJV" id="AEE-Os-sEh"/>
+                <outlet property="recodeTableView" destination="xVr-yu-2bj" id="zz6-ZN-zcO"/>
+                <outlet property="titleTableView" destination="eT3-1J-P31" id="XRT-3h-ynz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewlayoutTop" destination="bny-Hv-Htx" id="eeQ-jl-TE8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jPf-eZ-nNf" customClass="BaseShadowView">
+                    <rect key="frame" x="16" y="20" width="382" height="696"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2UL-8l-UJV">
+                            <rect key="frame" x="133" y="0.0" width="249" height="696"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xVr-yu-2bj">
+                                    <rect key="frame" x="0.0" y="0.0" width="321" height="696"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="696" id="KcN-wW-8aJ"/>
+                                        <constraint firstAttribute="width" constant="321" id="gtU-L8-4Y3"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-1" id="jdk-7R-02d"/>
+                                        <outlet property="delegate" destination="-1" id="jh0-Z5-Dyq"/>
+                                    </connections>
+                                </tableView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="xVr-yu-2bj" firstAttribute="leading" secondItem="2UL-8l-UJV" secondAttribute="leading" id="0wz-La-eJD"/>
+                                <constraint firstAttribute="trailing" secondItem="xVr-yu-2bj" secondAttribute="trailing" id="GH2-QA-kgf"/>
+                                <constraint firstItem="xVr-yu-2bj" firstAttribute="top" secondItem="2UL-8l-UJV" secondAttribute="top" id="kWa-2e-hiq"/>
+                                <constraint firstAttribute="bottom" secondItem="xVr-yu-2bj" secondAttribute="bottom" id="rvL-26-WMP"/>
+                            </constraints>
+                        </scrollView>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eT3-1J-P31">
+                            <rect key="frame" x="0.0" y="0.0" width="133" height="696"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="133" id="fAL-tU-TKu"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="7aO-Oc-LQy"/>
+                                <outlet property="delegate" destination="-1" id="Kxw-y8-1hm"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="eT3-1J-P31" firstAttribute="top" secondItem="jPf-eZ-nNf" secondAttribute="top" id="0jD-nw-KPh"/>
+                        <constraint firstItem="eT3-1J-P31" firstAttribute="leading" secondItem="jPf-eZ-nNf" secondAttribute="leading" id="3Hs-ZA-Tof"/>
+                        <constraint firstItem="2UL-8l-UJV" firstAttribute="top" secondItem="jPf-eZ-nNf" secondAttribute="top" id="JHz-2q-Q0u"/>
+                        <constraint firstAttribute="trailing" secondItem="2UL-8l-UJV" secondAttribute="trailing" id="N0f-OT-jJN"/>
+                        <constraint firstItem="2UL-8l-UJV" firstAttribute="leading" secondItem="eT3-1J-P31" secondAttribute="trailing" id="POq-kr-Fx9"/>
+                        <constraint firstAttribute="bottom" secondItem="2UL-8l-UJV" secondAttribute="bottom" id="Qdz-d5-PUe"/>
+                        <constraint firstAttribute="bottom" secondItem="eT3-1J-P31" secondAttribute="bottom" id="zYB-GO-g4Q"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.97254901960784312" green="0.97647058823529409" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="jPf-eZ-nNf" secondAttribute="trailing" constant="16" id="Aud-7w-HFh"/>
+                <constraint firstItem="jPf-eZ-nNf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" symbolic="YES" id="bny-Hv-Htx"/>
+                <constraint firstItem="jPf-eZ-nNf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="czB-Sh-MmC"/>
+                <constraint firstAttribute="bottom" secondItem="jPf-eZ-nNf" secondAttribute="bottom" constant="20" symbolic="YES" id="scq-CK-kOT"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="109.23913043478262"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

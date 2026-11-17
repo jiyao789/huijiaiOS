@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PlayPhoneCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="管家1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Lh-Xc-o22">
+                        <rect key="frame" x="19.999999999999996" y="14.666666666666664" width="42.666666666666657" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18711111111" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdn-oV-KSu">
+                        <rect key="frame" x="87.666666666666686" y="14.666666666666664" width="87" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5g3-BK-BuE">
+                        <rect key="frame" x="299" y="9.6666666666666643" width="35" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="31" id="Rpr-Sj-XID"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="拨打">
+                            <color key="titleColor" red="0.75294117647058822" green="0.66274509803921566" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="playPhoneBtnClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="aX3-5n-KfB"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <constraints>
+                <constraint firstItem="5Lh-Xc-o22" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="9AS-pj-VWe"/>
+                <constraint firstAttribute="trailing" secondItem="5g3-BK-BuE" secondAttribute="trailing" constant="20" id="R5y-IC-OaO"/>
+                <constraint firstItem="5Lh-Xc-o22" firstAttribute="centerY" secondItem="SEy-5g-ep8" secondAttribute="centerY" id="T7I-eR-MxV"/>
+                <constraint firstItem="mdn-oV-KSu" firstAttribute="leading" secondItem="5Lh-Xc-o22" secondAttribute="trailing" constant="25" id="l8k-XH-QH0"/>
+                <constraint firstItem="5g3-BK-BuE" firstAttribute="centerY" secondItem="5Lh-Xc-o22" secondAttribute="centerY" id="y3f-ZP-XM4"/>
+                <constraint firstItem="mdn-oV-KSu" firstAttribute="centerY" secondItem="5Lh-Xc-o22" secondAttribute="centerY" id="yKB-ey-7dQ"/>
+            </constraints>
+            <size key="customSize" width="354" height="50"/>
+            <connections>
+                <outlet property="nameLab" destination="5Lh-Xc-o22" id="L6J-Bb-ZNi"/>
+                <outlet property="phoneLab" destination="mdn-oV-KSu" id="j5y-KT-KN6"/>
+                <outlet property="playBtn" destination="5g3-BK-BuE" id="egh-sN-wTJ"/>
+            </connections>
+            <point key="canvasLocation" x="357.97101449275362" y="81.696428571428569"/>
+        </collectionViewCell>
+    </objects>
+</document>

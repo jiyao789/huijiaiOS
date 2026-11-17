@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountLogoutViewController">
+            <connections>
+                <outlet property="agreementBtn" destination="oFS-0u-tIR" id="tal-Pe-AaY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewLayoutTop" destination="RLA-rH-aCa" id="MO4-Td-9KK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8MW-Fb-bbN">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="为保证你的账号安全，在你提交的注销申请生效前，需同时满足以下条件：" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oc6-dN-JCC">
+                            <rect key="frame" x="24" y="30.000000000000004" width="366" height="38.333333333333343"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.账号处于安全状态" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXy-1N-oAN">
+                            <rect key="frame" x="24" y="98.333333333333329" width="366" height="19.333333333333329"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="账号处于正常使用状态，无被盗风险" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHt-7X-zKc">
+                            <rect key="frame" x="24" y="127.66666666666669" width="366" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.账号财产已结清" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7M-hP-laG">
+                            <rect key="frame" x="24" y="174.66666666666666" width="366" height="19.333333333333343"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="没有资产、欠款、未结清的资金和虚拟权益，本账号及通过本账号接入的第三方中没有未完成或存在争议的服务" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POa-8R-3wf">
+                            <rect key="frame" x="24" y="204" width="366" height="33.666666666666657"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.账号权限解除" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdP-hX-4PQ">
+                            <rect key="frame" x="24" y="267.66666666666669" width="366" height="19.333333333333314"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="账号已解除与其他产品的授权登录或绑定关系" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxQ-AQ-Vd6">
+                            <rect key="frame" x="24" y="297" width="366" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.账号无任何纠纷，包括投诉举报" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oz0-BL-qHV">
+                            <rect key="frame" x="24" y="344" width="366" height="19.333333333333314"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2EB-0W-k4g">
+                            <rect key="frame" x="24" y="663" width="366" height="33"/>
+                            <color key="backgroundColor" red="0.17254901959999999" green="0.42745098040000001" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="33" id="swh-XE-8fg"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="确认注销">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="commitLogoutClick:" destination="-1" eventType="touchUpInside" id="k43-RB-tAH"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFS-0u-tIR">
+                            <rect key="frame" x="24" y="628" width="119" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="bdo-CQ-2kF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="  我已阅读并同意" image="login_check_noselect_img">
+                                <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="agreementBtnClick:" destination="-1" eventType="touchUpInside" id="ptc-OW-LKF"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="GdP-hX-4PQ" firstAttribute="leading" secondItem="oc6-dN-JCC" secondAttribute="leading" id="12V-FR-aOt"/>
+                        <constraint firstItem="2EB-0W-k4g" firstAttribute="top" secondItem="oFS-0u-tIR" secondAttribute="bottom" constant="15" id="1E1-9K-pww"/>
+                        <constraint firstItem="oc6-dN-JCC" firstAttribute="leading" secondItem="8MW-Fb-bbN" secondAttribute="leading" constant="24" id="2Wf-K2-QrD"/>
+                        <constraint firstItem="2EB-0W-k4g" firstAttribute="leading" secondItem="oFS-0u-tIR" secondAttribute="leading" id="4fv-7F-Fmp"/>
+                        <constraint firstItem="2EB-0W-k4g" firstAttribute="leading" secondItem="oc6-dN-JCC" secondAttribute="leading" id="6DI-1H-KMt"/>
+                        <constraint firstItem="2EB-0W-k4g" firstAttribute="trailing" secondItem="oc6-dN-JCC" secondAttribute="trailing" id="ASb-uG-OPG"/>
+                        <constraint firstItem="POa-8R-3wf" firstAttribute="leading" secondItem="oc6-dN-JCC" secondAttribute="leading" id="Agh-7r-aWF"/>
+                        <constraint firstItem="wxQ-AQ-Vd6" firstAttribute="top" secondItem="GdP-hX-4PQ" secondAttribute="bottom" constant="10" id="D2v-at-dcP"/>
+                        <constraint firstItem="GdP-hX-4PQ" firstAttribute="top" secondItem="POa-8R-3wf" secondAttribute="bottom" constant="30" id="DbK-gR-8AZ"/>
+                        <constraint firstItem="wXy-1N-oAN" firstAttribute="top" secondItem="oc6-dN-JCC" secondAttribute="bottom" constant="30" id="Gq2-Pw-cb4"/>
+                        <constraint firstItem="wxQ-AQ-Vd6" firstAttribute="leading" secondItem="oc6-dN-JCC" secondAttribute="leading" id="H4R-Un-YV3"/>
+                        <constraint firstItem="wXy-1N-oAN" firstAttribute="leading" secondItem="oc6-dN-JCC" secondAttribute="leading" id="KFc-Dp-I99"/>
+                        <constraint firstItem="POa-8R-3wf" firstAttribute="trailing" secondItem="oc6-dN-JCC" secondAttribute="trailing" id="KgE-EE-dF6"/>
+                        <constraint firstAttribute="trailing" secondItem="oc6-dN-JCC" secondAttribute="trailing" constant="24" id="L4Y-bf-GFQ"/>
+                        <constraint firstItem="DHt-7X-zKc" firstAttribute="top" secondItem="wXy-1N-oAN" secondAttribute="bottom" constant="10" id="LAq-Pb-ULA"/>
+                        <constraint firstItem="GdP-hX-4PQ" firstAttribute="trailing" secondItem="oc6-dN-JCC" secondAttribute="trailing" id="LLQ-DS-rmm"/>
+                        <constraint firstItem="F7M-hP-laG" firstAttribute="top" secondItem="DHt-7X-zKc" secondAttribute="bottom" constant="30" id="NM7-eK-eNX"/>
+                        <constraint firstItem="Oz0-BL-qHV" firstAttribute="leading" secondItem="oc6-dN-JCC" secondAttribute="leading" id="OBO-lH-nTz"/>
+                        <constraint firstAttribute="bottom" secondItem="2EB-0W-k4g" secondAttribute="bottom" constant="40" id="OfA-3z-KQg"/>
+                        <constraint firstItem="Oz0-BL-qHV" firstAttribute="trailing" secondItem="oc6-dN-JCC" secondAttribute="trailing" id="P5c-rO-Byu"/>
+                        <constraint firstItem="POa-8R-3wf" firstAttribute="top" secondItem="F7M-hP-laG" secondAttribute="bottom" constant="10" id="XAz-1X-QMH"/>
+                        <constraint firstItem="DHt-7X-zKc" firstAttribute="leading" secondItem="oc6-dN-JCC" secondAttribute="leading" id="ckU-DL-FBZ"/>
+                        <constraint firstItem="Oz0-BL-qHV" firstAttribute="top" secondItem="wxQ-AQ-Vd6" secondAttribute="bottom" constant="30" id="dbr-8f-Bm3"/>
+                        <constraint firstItem="wXy-1N-oAN" firstAttribute="trailing" secondItem="oc6-dN-JCC" secondAttribute="trailing" id="eNq-Hj-lpS"/>
+                        <constraint firstItem="DHt-7X-zKc" firstAttribute="trailing" secondItem="oc6-dN-JCC" secondAttribute="trailing" id="efa-0j-Iim"/>
+                        <constraint firstItem="F7M-hP-laG" firstAttribute="leading" secondItem="oc6-dN-JCC" secondAttribute="leading" id="h6T-BJ-Rar"/>
+                        <constraint firstItem="wxQ-AQ-Vd6" firstAttribute="trailing" secondItem="oc6-dN-JCC" secondAttribute="trailing" id="iVN-qs-npD"/>
+                        <constraint firstItem="F7M-hP-laG" firstAttribute="trailing" secondItem="oc6-dN-JCC" secondAttribute="trailing" id="pZ3-lj-sec"/>
+                        <constraint firstItem="oc6-dN-JCC" firstAttribute="top" secondItem="8MW-Fb-bbN" secondAttribute="top" constant="30" id="xBr-UY-Ug1"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="8MW-Fb-bbN" secondAttribute="bottom" id="ARa-3o-EIN"/>
+                <constraint firstAttribute="trailing" secondItem="8MW-Fb-bbN" secondAttribute="trailing" id="Pcc-vy-c3r"/>
+                <constraint firstItem="8MW-Fb-bbN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="RLA-rH-aCa"/>
+                <constraint firstItem="8MW-Fb-bbN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bFV-C4-Fsn"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="login_check_noselect_img" width="11" height="11"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,17 @@
+//
+//  AccountLogoutViewController.h
+//  StandardApplication
+//
+//  Created by DTiOS on 2024/9/25.
+//  Copyright © 2024 DTiOS. All rights reserved.
+//
+
+#import "BaseViewController.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface AccountLogoutViewController : BaseViewController
+
+@end
+
+NS_ASSUME_NONNULL_END

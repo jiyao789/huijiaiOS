@@ -1,0 +1,71 @@
+{
+    "occupation":[
+        {
+            "label": "机关单位",
+            "value": "1"
+        },{
+            "label": "事业单位",
+            "value": "2"
+        },{
+            "label": "国有企业",
+            "value": "3"
+        },{
+            "label": "集体企业",
+            "value": "4"
+        },{
+            "label": "外资企业",
+            "value": "5"
+        },{
+            "label": "合资企业",
+            "value": "6"
+        },{
+            "label": "私营企业",
+            "value": "7"
+        },{
+            "label": "港澳台企业",
+            "value": "8"
+        },{
+            "label": "个体工商户",
+            "value": "9"
+        },{
+            "label": "非正规就业劳动组织",
+            "value": "10"
+        },{
+            "label": "其他",
+            "value": "11"
+        }
+    ],
+    "education":[
+        {
+            "label": "高中及以下",
+            "value": "1"
+        },{
+            "label": "大专",
+            "value": "2"
+        },{
+            "label": "本科",
+            "value": "3"
+        },{
+            "label": "硕士研究生",
+            "value": "4"
+        },{
+            "label": "博士研究生",
+            "value": "5"
+        }
+    ],
+    "politics":[
+        {
+            "label": "党员",
+            "value": "1"
+        },{
+            "label": "团员",
+            "value": "2"
+        },{
+            "label": "群众",
+            "value": "3"
+        },{
+            "label": "其他",
+            "value": "4"
+        }
+    ]
+}

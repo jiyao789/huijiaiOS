@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyContractDetailViewController">
+            <connections>
+                <outlet property="bottomView" destination="7f0-bg-grB" id="6bV-8E-eLc"/>
+                <outlet property="bottomViewLayoutHeight" destination="otX-sO-UWo" id="Knh-Qc-WgC"/>
+                <outlet property="continueContractBtn" destination="30K-u5-IVz" id="aC6-f8-Rft"/>
+                <outlet property="signContractBtn" destination="5b9-La-au6" id="Or9-Ph-HXA"/>
+                <outlet property="surrenderBtn" destination="twT-sv-r1y" id="QBl-0G-dbo"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7f0-bg-grB">
+                    <rect key="frame" x="0.0" y="622" width="414" height="114"/>
+                    <subviews>
+                        <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twT-sv-r1y">
+                            <rect key="frame" x="103.66666666666669" y="30" width="83" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="VqO-sK-FRG"/>
+                                <constraint firstAttribute="width" constant="83" id="dJ5-v8-2yd"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="退租">
+                                <color key="titleColor" red="0.16862745098039217" green="0.40392156862745099" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.16862745098039217" green="0.40392156862745099" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="contractBtnClick:" destination="-1" eventType="touchUpInside" id="z1m-8d-BIc"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30K-u5-IVz">
+                            <rect key="frame" x="226.66666666666663" y="30" width="83" height="28"/>
+                            <color key="backgroundColor" red="0.16862745100000001" green="0.4039215686" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="WKX-aq-SRE"/>
+                                <constraint firstAttribute="width" constant="83" id="f11-vT-o95"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="续租">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="contractBtnClick:" destination="-1" eventType="touchUpInside" id="LSx-Nu-upK"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5b9-La-au6">
+                            <rect key="frame" x="103.66666666666669" y="30" width="206" height="28"/>
+                            <color key="backgroundColor" red="0.16862745100000001" green="0.4039215686" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="TQP-Cg-UqX"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="立即签约">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.16862745100000001" green="0.4039215686" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="contractBtnClick:" destination="-1" eventType="touchUpInside" id="mwP-Av-N48"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="5b9-La-au6" firstAttribute="leading" secondItem="twT-sv-r1y" secondAttribute="leading" id="GzD-YV-z1C"/>
+                        <constraint firstItem="30K-u5-IVz" firstAttribute="centerY" secondItem="5b9-La-au6" secondAttribute="centerY" id="HZd-VS-hSj"/>
+                        <constraint firstItem="30K-u5-IVz" firstAttribute="trailing" secondItem="5b9-La-au6" secondAttribute="trailing" id="Nmw-Gd-Spj"/>
+                        <constraint firstItem="30K-u5-IVz" firstAttribute="leading" secondItem="twT-sv-r1y" secondAttribute="trailing" constant="40" id="PQ8-9b-m2L"/>
+                        <constraint firstItem="30K-u5-IVz" firstAttribute="centerY" secondItem="twT-sv-r1y" secondAttribute="centerY" id="ilx-r3-Oa7"/>
+                        <constraint firstAttribute="height" constant="114" id="otX-sO-UWo"/>
+                        <constraint firstItem="twT-sv-r1y" firstAttribute="centerX" secondItem="7f0-bg-grB" secondAttribute="centerX" constant="-62" id="xG2-KK-Fi2"/>
+                        <constraint firstItem="twT-sv-r1y" firstAttribute="top" secondItem="7f0-bg-grB" secondAttribute="top" constant="30" id="zhZ-YY-vdU"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="7f0-bg-grB" secondAttribute="trailing" id="0Ym-UQ-bgE"/>
+                <constraint firstAttribute="bottom" secondItem="7f0-bg-grB" secondAttribute="bottom" id="sc6-CV-9Jf"/>
+                <constraint firstItem="7f0-bg-grB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xm3-M8-qeR"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="109.23913043478262"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HomeHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="585"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mdf-c7-ocN" customClass="SDCycleScrollView">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="312"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="312" id="nDT-tC-r5H"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Em-of-8KK" customClass="HomeHeaderNatureView">
+                    <rect key="frame" x="0.0" y="209" width="414" height="274"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="274" id="9aT-HM-VPH"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ogj-Rl-boP">
+                    <rect key="frame" x="0.0" y="483" width="414" height="102"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="102" id="RaX-5t-cDE"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FX0-8W-3eO">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Ogj-Rl-boP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3Rq-Wm-APp"/>
+                <constraint firstItem="Mdf-c7-ocN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="60E-nC-Z50"/>
+                <constraint firstItem="5Em-of-8KK" firstAttribute="top" secondItem="Mdf-c7-ocN" secondAttribute="bottom" constant="-103" id="7ox-nf-npc"/>
+                <constraint firstAttribute="trailing" secondItem="5Em-of-8KK" secondAttribute="trailing" id="R2b-rD-vqk"/>
+                <constraint firstItem="5Em-of-8KK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RfX-69-wOy"/>
+                <constraint firstItem="Ogj-Rl-boP" firstAttribute="top" secondItem="5Em-of-8KK" secondAttribute="bottom" id="bZz-VK-x71"/>
+                <constraint firstAttribute="trailing" secondItem="Mdf-c7-ocN" secondAttribute="trailing" id="e4Q-0G-lEz"/>
+                <constraint firstItem="Mdf-c7-ocN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eT1-w6-aLT"/>
+                <constraint firstAttribute="bottom" secondItem="Ogj-Rl-boP" secondAttribute="bottom" id="hhO-Or-kIB"/>
+                <constraint firstAttribute="trailing" secondItem="Ogj-Rl-boP" secondAttribute="trailing" id="xwV-np-nZR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="homeCollectionView" destination="Ogj-Rl-boP" id="yUP-AJ-nna"/>
+                <outlet property="homeCycleScrollView" destination="Mdf-c7-ocN" id="ebd-HH-SdU"/>
+                <outlet property="homeNatureView" destination="5Em-of-8KK" id="hE0-Zl-mZ6"/>
+                <outlet property="layout" destination="FX0-8W-3eO" id="pwf-12-amC"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="35.869565217391305"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

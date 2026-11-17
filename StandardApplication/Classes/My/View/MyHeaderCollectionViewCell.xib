@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MyHeaderCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="57" height="57"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="57" height="57"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ar-4j-ARL">
+                        <rect key="frame" x="0.0" y="7" width="57" height="29"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                        <color key="textColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的足迹" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYD-x2-dRy">
+                        <rect key="frame" x="0.0" y="40" width="57" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.53333333333333333" green="0.54509803921568623" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <constraints>
+                <constraint firstItem="7Ar-4j-ARL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="7" id="692-fN-8YP"/>
+                <constraint firstItem="rYD-x2-dRy" firstAttribute="top" secondItem="7Ar-4j-ARL" secondAttribute="bottom" constant="4" id="7gK-Od-ro6"/>
+                <constraint firstAttribute="trailing" secondItem="7Ar-4j-ARL" secondAttribute="trailing" id="MuF-aw-nQW"/>
+                <constraint firstAttribute="trailing" secondItem="rYD-x2-dRy" secondAttribute="trailing" id="c0c-4X-XXp"/>
+                <constraint firstItem="7Ar-4j-ARL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ujL-bQ-loe"/>
+                <constraint firstItem="rYD-x2-dRy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zGN-n2-aAu"/>
+            </constraints>
+            <connections>
+                <outlet property="nameLab" destination="rYD-x2-dRy" id="8H2-6p-Ecv"/>
+                <outlet property="numberLab" destination="7Ar-4j-ARL" id="d9J-xc-I2z"/>
+            </connections>
+            <point key="canvasLocation" x="138.40579710144928" y="109.48660714285714"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="RmtNewsTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="235"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="235"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dg0-o1-ip2">
+                        <rect key="frame" x="12" y="0.0" width="296" height="235"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7K-bu-onj">
+                                <rect key="frame" x="0.0" y="15" width="4.333333333333333" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="HaZ-NU-CM2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <color key="textColor" red="0.027450980390000001" green="0.027450980390000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cL2-3T-LV7" customClass="QMUIButton">
+                                <rect key="frame" x="227" y="10.666666666666664" width="69" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="Cr8-n2-4h5"/>
+                                    <constraint firstAttribute="height" constant="29" id="e9Y-AK-iwS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="更多" image="life_right_more_icon">
+                                    <color key="titleColor" red="0.63921568630000003" green="0.65490196079999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="moreBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="YGp-xd-s55"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dYb-n8-hdy">
+                                <rect key="frame" x="0.0" y="45" width="296" height="180"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RuB-Yv-7kR">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cL2-3T-LV7" firstAttribute="centerY" secondItem="P7K-bu-onj" secondAttribute="centerY" id="2sY-QW-hSo"/>
+                            <constraint firstItem="P7K-bu-onj" firstAttribute="top" secondItem="Dg0-o1-ip2" secondAttribute="top" constant="15" id="7XU-87-6MS"/>
+                            <constraint firstItem="dYb-n8-hdy" firstAttribute="leading" secondItem="Dg0-o1-ip2" secondAttribute="leading" id="BYD-rb-RPh"/>
+                            <constraint firstAttribute="bottom" secondItem="dYb-n8-hdy" secondAttribute="bottom" constant="10" id="OOb-KM-XjB"/>
+                            <constraint firstItem="P7K-bu-onj" firstAttribute="leading" secondItem="Dg0-o1-ip2" secondAttribute="leading" id="Xzf-Bj-GNw"/>
+                            <constraint firstItem="dYb-n8-hdy" firstAttribute="top" secondItem="P7K-bu-onj" secondAttribute="bottom" constant="10" id="nzK-zu-0X9"/>
+                            <constraint firstAttribute="trailing" secondItem="dYb-n8-hdy" secondAttribute="trailing" id="tMm-zv-yjb"/>
+                            <constraint firstAttribute="trailing" secondItem="cL2-3T-LV7" secondAttribute="trailing" id="xVE-Fy-iwy"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Dg0-o1-ip2" secondAttribute="trailing" constant="12" id="Mxl-H9-Nua"/>
+                    <constraint firstItem="Dg0-o1-ip2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aze-rC-MS4"/>
+                    <constraint firstAttribute="bottom" secondItem="Dg0-o1-ip2" secondAttribute="bottom" id="bYx-Iv-eZW"/>
+                    <constraint firstItem="Dg0-o1-ip2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="ore-FN-bnn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="layout" destination="RuB-Yv-7kR" id="uAU-8K-svj"/>
+                <outlet property="moreButton" destination="cL2-3T-LV7" id="e8x-oE-9BM"/>
+                <outlet property="rmtNewsCollectionView" destination="dYb-n8-hdy" id="u42-Be-Dcf"/>
+                <outlet property="titleLab" destination="P7K-bu-onj" id="pci-ld-itO"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="21"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="life_right_more_icon" width="6" height="10"/>
+    </resources>
+</document>

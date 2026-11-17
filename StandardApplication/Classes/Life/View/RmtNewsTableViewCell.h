@@ -1,0 +1,25 @@
+//
+//  RmtNewsTableViewCell.h
+//  StandardApplication
+//
+//  Created by DTiOS on 2024/10/25.
+//  Copyright © 2024 DTiOS. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "MacroDefine.h"
+#import "LifeModel.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface RmtNewsTableViewCell : UITableViewCell<UICollectionViewDelegate,UICollectionViewDataSource>
+@property (weak, nonatomic) IBOutlet UICollectionView *rmtNewsCollectionView;
+@property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *layout;
+@property (weak, nonatomic) IBOutlet UILabel *titleLab;
+@property (weak, nonatomic) IBOutlet QMUIButton *moreButton;
+
+@property (strong, nonatomic) NSMutableArray *rmtNewsList;
+@property (strong, nonatomic) LifeModel *lifeModel;
+@end
+
+NS_ASSUME_NONNULL_END

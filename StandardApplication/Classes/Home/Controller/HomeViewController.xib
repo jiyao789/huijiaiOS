@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
+            <connections>
+                <outlet property="homeNatureView" destination="GBW-QT-wyV" id="otp-I4-J8P"/>
+                <outlet property="homeNatureViewLayoutTop" destination="5rz-So-Thm" id="FRZ-JJ-2pY"/>
+                <outlet property="homeTableView" destination="OIp-Hp-1Pg" id="uCw-Bf-Scf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OIp-Hp-1Pg">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="gbf-By-8Ow"/>
+                        <outlet property="delegate" destination="-1" id="5e2-x8-cUO"/>
+                    </connections>
+                </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GBW-QT-wyV" customClass="HomeHeaderNatureView">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="280"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="280" id="bj4-4F-W3D"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="GBW-QT-wyV" secondAttribute="trailing" id="2We-l7-fsa"/>
+                <constraint firstItem="OIp-Hp-1Pg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2fP-7X-rjm"/>
+                <constraint firstItem="GBW-QT-wyV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5rz-So-Thm"/>
+                <constraint firstItem="GBW-QT-wyV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="88G-h9-uw1"/>
+                <constraint firstAttribute="trailing" secondItem="OIp-Hp-1Pg" secondAttribute="trailing" id="AUt-jg-UkM"/>
+                <constraint firstItem="OIp-Hp-1Pg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HhX-2c-Sga"/>
+                <constraint firstAttribute="bottom" secondItem="OIp-Hp-1Pg" secondAttribute="bottom" id="kXH-0f-mtA"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="117.39130434782609"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
