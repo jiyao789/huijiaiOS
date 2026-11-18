@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIView *userSummaryView;
 @property (weak, nonatomic) IBOutlet UIView *privacySummaryView;
 @property (weak, nonatomic) IBOutlet UIView *personalInfoListView;
+@property (weak, nonatomic) IBOutlet UIView *thirdPartyShareListView;
 @property (weak, nonatomic) IBOutlet UIButton *accountCancelBtn;
 
 @end
@@ -62,30 +63,51 @@
     }];
     
     [_userProtocalView whenTapped:^{
-        [weakSelf pushProtocalInfo:@"10"];
+        ProtocolBaseWKWebViewController *webVc = [[ProtocolBaseWKWebViewController alloc] init];
+        webVc.webTitle = @"用户协议";
+        webVc.webUrl = @"https://docs.qq.com/doc/DTWRuVG9hSWJvY0J5";
+        [weakSelf.navigationController pushViewController:webVc animated:YES];
     }];
     
     [_prrivateProtocolView whenTapped:^{
-        [weakSelf pushProtocalInfo:@"11"];
+        ProtocolBaseWKWebViewController *webVc = [[ProtocolBaseWKWebViewController alloc] init];
+        webVc.webTitle = @"隐私政策";
+        webVc.webUrl = @"https://docs.qq.com/doc/DTXBETHdGYnBUREpL";
+        [weakSelf.navigationController pushViewController:webVc animated:YES];
     }];
 
     // 用户协议摘要点击
     [_userSummaryView whenTapped:^{
-        // 复用“用户协议”的类型标识（假设摘要和全文指向同一个后端解析ID，或你有新的ID）
-        [weakSelf pushProtocalInfo:@"10"]; 
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"user_agreement_summary" ofType:@"html"];
+        NSString *html = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+        ProtocolBaseWKWebViewController *webVc = [[ProtocolBaseWKWebViewController alloc] init];
+        webVc.webTitle = @"用户协议摘要";
+        webVc.htmlStr = html;
+        [weakSelf.navigationController pushViewController:webVc animated:YES];
     }];
     
     // 隐私政策摘要点击
     [_privacySummaryView whenTapped:^{
-        // 复用“隐私政策”的类型标识
-        [weakSelf pushProtocalInfo:@"11"];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"privacy_policy_summary" ofType:@"html"];
+        NSString *html = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+        ProtocolBaseWKWebViewController *webVc = [[ProtocolBaseWKWebViewController alloc] init];
+        webVc.webTitle = @"隐私政策摘要";
+        webVc.htmlStr = html;
+        [weakSelf.navigationController pushViewController:webVc animated:YES];
     }];
 
     // 个人信息收集清单点击
-
     [_personalInfoListView whenTapped:^{
         PersonalInfoDetailsViewController *vc = [[PersonalInfoDetailsViewController alloc] init];
         [weakSelf.navigationController pushViewController:vc animated:YES];
+    }];
+    
+    // 第三方共享个人信息清单点击
+    [_thirdPartyShareListView whenTapped:^{
+        ProtocolBaseWKWebViewController *webVc = [[ProtocolBaseWKWebViewController alloc] init];
+        webVc.webTitle = @"第三方共享个人信息清单";
+        webVc.webUrl = @"https://run.huichenghuijia.com/list.html";
+        [weakSelf.navigationController pushViewController:webVc animated:YES];
     }];
     
     if (!IsStrEmpty([User shareUser].token)) {

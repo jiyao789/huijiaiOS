@@ -41,13 +41,16 @@
     _changeIndex = 1;
     _checkProtocal = NO;
     
+    _userInfoLab.userInteractionEnabled = YES;
+    _privacyInfoLab.userInteractionEnabled = YES;
+
     KWeakSelf
     [_userInfoLab whenTapped:^{
         [weakSelf pushUserAgreement];
     }];
     
     [_privacyInfoLab whenTapped:^{
-        [weakSelf pushProtocalInfo:@"11"];
+        [weakSelf pushPrivacyPolicy];
     }];
     
     struct utsname systemInfo;
@@ -63,18 +66,12 @@
     [self.navigationController pushViewController:webVc animated:YES];
 }
 
-- (void)pushProtocalInfo:(NSString *)type
+- (void)pushPrivacyPolicy
 {
-    [MBProgressHUD showStatus:nil toView:self.view];
-    [HttpRequest requestNewsInfoData:type result:^(NewsInfoModel * _Nonnull model, NSString * _Nonnull msg) {
-        [MBProgressHUD dismissHUDForView:self.view];
-        if (!IsNilOrNull(model)) {
-            ProtocolBaseWKWebViewController *webVc = [[ProtocolBaseWKWebViewController alloc] init];
-            webVc.webTitle = NONullString(model.title);
-            webVc.webUrl = NONullString(model.file_url);
-            [self.navigationController pushViewController:webVc animated:YES];
-        }
-    }];
+    ProtocolBaseWKWebViewController *webVc = [[ProtocolBaseWKWebViewController alloc] init];
+    webVc.webTitle = @"隐私政策";
+    webVc.webUrl = @"https://docs.qq.com/doc/DTXBETHdGYnBUREpL";
+    [self.navigationController pushViewController:webVc animated:YES];
 }
 
 - (IBAction)getCodeBtnClick:(id)sender

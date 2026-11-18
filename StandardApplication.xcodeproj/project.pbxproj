@@ -396,6 +396,8 @@
 		03A93874273A4F0200DE4FD5 /* VersionUpdateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A93873273A4F0200DE4FD5 /* VersionUpdateView.m */; };
 		03A93876273A4F0E00DE4FD5 /* VersionUpdateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03A93875273A4F0E00DE4FD5 /* VersionUpdateView.xib */; };
 		03A9B32F272AB0DC005A728E /* systeminfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 03A9B32E272AB0DC005A728E /* systeminfo.json */; };
+		03BA20261118000200CEAEF2 /* user_agreement_summary.html in Resources */ = {isa = PBXBuildFile; fileRef = 03BA20261118000100CEAEF1 /* user_agreement_summary.html */; };
+		03BA20261118000400CEAEF4 /* privacy_policy_summary.html in Resources */ = {isa = PBXBuildFile; fileRef = 03BA20261118000300CEAEF3 /* privacy_policy_summary.html */; };
 		03AA5EAE2729491200D46694 /* RechargeRecodeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AA5EAC2729491200D46694 /* RechargeRecodeTableViewCell.m */; };
 		03AA5EAF2729491200D46694 /* RechargeRecodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03AA5EAD2729491200D46694 /* RechargeRecodeTableViewCell.xib */; };
 		03AF4DBE2CCB446A00D79638 /* RmtNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03AF4DBD2CCB446A00D79638 /* RmtNewsTableViewCell.xib */; };
@@ -1311,6 +1313,8 @@
 		03A93873273A4F0200DE4FD5 /* VersionUpdateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VersionUpdateView.m; sourceTree = "<group>"; };
 		03A93875273A4F0E00DE4FD5 /* VersionUpdateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VersionUpdateView.xib; sourceTree = "<group>"; };
 		03A9B32E272AB0DC005A728E /* systeminfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = systeminfo.json; sourceTree = "<group>"; };
+		03BA20261118000100CEAEF1 /* user_agreement_summary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = user_agreement_summary.html; sourceTree = "<group>"; };
+		03BA20261118000300CEAEF3 /* privacy_policy_summary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = privacy_policy_summary.html; sourceTree = "<group>"; };
 		03AA5EAB2729491200D46694 /* RechargeRecodeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RechargeRecodeTableViewCell.h; sourceTree = "<group>"; };
 		03AA5EAC2729491200D46694 /* RechargeRecodeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RechargeRecodeTableViewCell.m; sourceTree = "<group>"; };
 		03AA5EAD2729491200D46694 /* RechargeRecodeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RechargeRecodeTableViewCell.xib; sourceTree = "<group>"; };
@@ -2979,6 +2983,8 @@
 				03E4F91E2564FF1F0078E209 /* shareIcon.png */,
 				03C4ED792727A46000AAD6A7 /* myinfo.json */,
 				03A9B32E272AB0DC005A728E /* systeminfo.json */,
+				03BA20261118000100CEAEF1 /* user_agreement_summary.html */,
+				03BA20261118000300CEAEF3 /* privacy_policy_summary.html */,
 				03BB5F1A275A1DC000ED0C94 /* question.json */,
 			);
 			path = Resources;
@@ -3868,6 +3874,8 @@
 				03E014132720134F007A6520 /* ChooseMoreView.xib in Resources */,
 				0347F0302B25935300BD855C /* WaitHouseStatusTableViewCell.xib in Resources */,
 				03A9B32F272AB0DC005A728E /* systeminfo.json in Resources */,
+				03BA20261118000200CEAEF2 /* user_agreement_summary.html in Resources */,
+				03BA20261118000400CEAEF4 /* privacy_policy_summary.html in Resources */,
 				0350CADB24AF22D800B8E909 /* record_fail.caf in Resources */,
 				03144E0C2253421000B90383 /* LaunchScreen.storyboard in Resources */,
 				03F4B1A32A3DC16C00A17F33 /* WaitNotesTableViewCell.xib in Resources */,

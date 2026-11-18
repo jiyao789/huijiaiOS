@@ -587,15 +587,10 @@ static NSString * const kAgreementUpdateShownVersionKey = @"kAgreementUpdateShow
         [strongSelf openAgreementDocWithTitle:@"用户协议" url:@"https://docs.qq.com/doc/DTWRuVG9hSWJvY0J5" alertController:weakAlert];
     };
     
-    // 隐私政策跳转（与登录页跳转体验统一）
+    // 隐私政策跳转（腾讯文档最新地址直连秒开）
     alertView.privacyClickBlock = ^{
         KStrongSelf(weakSelf)
-        [MBProgressHUD showStatus:nil toView:strongSelf.view];
-        [HttpRequest requestNewsInfoData:@"11" result:^(NewsInfoModel * _Nonnull model, NSString * _Nonnull msg) {
-            [MBProgressHUD dismissHUDForView:strongSelf.view];
-            NSString *fileUrl = (!IsNilOrNull(model) && !IsStrEmpty(model.file_url)) ? model.file_url : @"https://docs.qq.com/doc/DTXBETHdGYnBUREpL";
-            [strongSelf openAgreementDocWithTitle:@"隐私政策" url:fileUrl alertController:weakAlert];
-        }];
+        [strongSelf openAgreementDocWithTitle:@"隐私政策" url:@"https://docs.qq.com/doc/DTXBETHdGYnBUREpL" alertController:weakAlert];
     };
     
     [self presentViewController:alertController animated:YES completion:nil];

@@ -111,7 +111,7 @@
                                 <action selector="checkProtocalBtnClick:" destination="-1" eventType="touchUpInside" id="Spe-Ks-cXA"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="《用户协议》" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hl9-bk-2k2">
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="《用户协议》" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hl9-bk-2k2">
                             <rect key="frame" x="165.66666666666666" y="671" width="67.5" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="xfM-Mh-9iS"/>
@@ -129,7 +129,7 @@
                             <color key="textColor" red="0.73333333333333328" green="0.73333333333333328" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="《隐私政策》" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6s-A0-OHr">
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="《隐私政策》" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6s-A0-OHr">
                             <rect key="frame" x="248.66666666666669" y="671" width="67.5" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="mIQ-b0-Lfl"/>

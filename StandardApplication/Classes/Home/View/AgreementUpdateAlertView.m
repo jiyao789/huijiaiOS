@@ -76,7 +76,9 @@
     _contentTextView = [[UITextView alloc] initWithFrame:CGRectMake(paddingX, CGRectGetMaxY(_titleLabel.frame) + 16, contentWidth, 48)];
     _contentTextView.backgroundColor = [UIColor clearColor];
     _contentTextView.editable = NO;
+    _contentTextView.selectable = YES;
     _contentTextView.scrollEnabled = NO;
+    _contentTextView.userInteractionEnabled = YES;
     _contentTextView.textContainerInset = UIEdgeInsetsZero;
     _contentTextView.textContainer.lineFragmentPadding = 0;
     _contentTextView.attributedText = attrStr;
@@ -109,23 +111,30 @@
     }
 }
 
-#pragma mark - UITextViewDelegate
-
-- (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange interaction:(UITextItemInteraction)interaction {
+- (void)handleAgreementLink:(NSURL *)URL {
     if ([URL.scheme isEqualToString:@"agreement"]) {
         if ([URL.host isEqualToString:@"privacy"]) {
             if (self.privacyClickBlock) {
                 self.privacyClickBlock();
             }
-            return NO;
         } else if ([URL.host isEqualToString:@"user"]) {
             if (self.userAgreementClickBlock) {
                 self.userAgreementClickBlock();
             }
-            return NO;
         }
     }
-    return YES;
+}
+
+#pragma mark - UITextViewDelegate
+
+- (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange interaction:(UITextItemInteraction)interaction {
+    [self handleAgreementLink:URL];
+    return NO;
+}
+
+- (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange {
+    [self handleAgreementLink:URL];
+    return NO;
 }
 
 @end

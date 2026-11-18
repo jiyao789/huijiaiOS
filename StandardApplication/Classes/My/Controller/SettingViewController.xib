@@ -19,6 +19,7 @@
                 <outlet property="userSummaryView" destination="summary-user-view" id="A1B-2C-3D4"/>
                 <outlet property="versionNumberLab" destination="xWN-Y3-XNE" id="WGP-qZ-k9U"/>
                 <outlet property="personalInfoListView" destination="personal-info-list-view" id="p11-custom-id"/>
+                <outlet property="thirdPartyShareListView" destination="third-party-share-view" id="tp-custom-id"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewTopLayout" destination="8lm-4h-pnc" id="AwO-OL-K5d"/>
             </connections>
@@ -262,10 +263,35 @@
                                 <constraint firstItem="img-personal-info" firstAttribute="centerY" secondItem="lab-personal-info" secondAttribute="centerY" id="p10"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="third-party-share-view">
+                            <rect key="frame" x="0.0" y="329" width="382" height="47"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第三方共享个人信息清单" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lab-third-party">
+                                    <rect key="frame" x="13" y="15.666666666666686" width="160" height="15.666666666666664"/>
+                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="13"/>
+                                    <color key="textColor" red="0.1333333333" green="0.090196078430000007" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="right_black_img" translatesAutoresizingMaskIntoConstraints="NO" id="img-third-party">
+                                    <rect key="frame" x="363" y="19" width="5" height="9"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="9" id="h4"/>
+                                        <constraint firstAttribute="width" constant="5" id="w4"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="47" id="p11"/>
+                                <constraint firstItem="lab-third-party" firstAttribute="leading" secondItem="third-party-share-view" secondAttribute="leading" constant="13" id="p12"/>
+                                <constraint firstItem="lab-third-party" firstAttribute="centerY" secondItem="third-party-share-view" secondAttribute="centerY" id="p13"/>
+                                <constraint firstAttribute="trailing" secondItem="img-third-party" secondAttribute="trailing" constant="14" id="p14"/>
+                                <constraint firstItem="img-third-party" firstAttribute="centerY" secondItem="lab-third-party" secondAttribute="centerY" id="p15"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="329" id="42x-MJ-g3d"/>
+                        <constraint firstAttribute="height" constant="376" id="42x-MJ-g3d"/>
                         <constraint firstItem="TzS-zE-12c" firstAttribute="leading" secondItem="ERl-hm-1BW" secondAttribute="leading" id="6nB-fa-xbF"/>
                         <constraint firstItem="Jmm-Dr-HUn" firstAttribute="top" secondItem="uDD-p1-nc5" secondAttribute="bottom" id="78s-EF-f86"/>
                         <constraint firstItem="TzS-zE-12c" firstAttribute="top" secondItem="Jmm-Dr-HUn" secondAttribute="bottom" id="Ac5-BU-76X"/>
@@ -282,6 +308,9 @@
                         <constraint firstItem="personal-info-list-view" firstAttribute="top" secondItem="summary-privacy-view" secondAttribute="bottom" id="con7"/>
                         <constraint firstItem="personal-info-list-view" firstAttribute="leading" secondItem="ERl-hm-1BW" secondAttribute="leading" id="con8"/>
                         <constraint firstAttribute="trailing" secondItem="personal-info-list-view" secondAttribute="trailing" id="con9"/>
+                        <constraint firstItem="third-party-share-view" firstAttribute="top" secondItem="personal-info-list-view" secondAttribute="bottom" id="con10"/>
+                        <constraint firstItem="third-party-share-view" firstAttribute="leading" secondItem="ERl-hm-1BW" secondAttribute="leading" id="con11"/>
+                        <constraint firstAttribute="trailing" secondItem="third-party-share-view" secondAttribute="trailing" id="con12"/>
                         <constraint firstAttribute="trailing" secondItem="Jmm-Dr-HUn" secondAttribute="trailing" id="d2i-c4-CDG"/>
                         <constraint firstAttribute="trailing" secondItem="TzS-zE-12c" secondAttribute="trailing" id="lKb-30-Vln"/>
                         <constraint firstItem="uDD-p1-nc5" firstAttribute="top" secondItem="9pm-8B-Wq5" secondAttribute="bottom" id="nAY-ok-KHI"/>
