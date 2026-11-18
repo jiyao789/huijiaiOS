@@ -15,16 +15,16 @@
 
 // 公共接口
 // Api正式环境
-//static NSString *const BaseURL = @"https://alpha.huichenghuijia.com/user";
-//static NSString *const BaseApiURL = @"https://alpha.huichenghuijia.com";
-//static NSString *const HardwareBaseURL = @"https://alpha.huichenghuijia.com/user/hardware";
-//static NSString *const ReleaseBaseURL = @"https://alpha.huichenghuijia.com/release";
+static NSString *const BaseURL = @"https://alpha.huichenghuijia.com/user";
+static NSString *const BaseApiURL = @"https://alpha.huichenghuijia.com";
+static NSString *const HardwareBaseURL = @"https://alpha.huichenghuijia.com/user/hardware";
+static NSString *const ReleaseBaseURL = @"https://alpha.huichenghuijia.com/release";
 
 // Api测试环境
-static NSString *const BaseURL = @"http://beta.fujuhaofang.com/user";
-static NSString *const BaseApiURL = @"http://beta.fujuhaofang.com";
-static NSString *const HardwareBaseURL = @"http://beta.fujuhaofang.com/user/hardware";
-static NSString *const ReleaseBaseURL = @"http://beta.fujuhaofang.com/release";
+// static NSString *const BaseURL = @"http://beta.fujuhaofang.com/user";
+// static NSString *const BaseApiURL = @"http://beta.fujuhaofang.com";
+// static NSString *const HardwareBaseURL = @"http://beta.fujuhaofang.com/user/hardware";
+// static NSString *const ReleaseBaseURL = @"http://beta.fujuhaofang.com/release";
 
 // 后台测试环境
 //static NSString *const BaseURL = @"http://pre.fujuhaofang.com/user";
