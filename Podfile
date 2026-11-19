@@ -1,5 +1,5 @@
 
-platform :ios, ‘12.0’
+platform :ios, '15.0'
 #use_frameworks!
 
 source 'https://github.com/CocoaPods/Specs.git'
@@ -54,10 +54,20 @@ end
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|
+            config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
             config.build_settings['EXPANDED_CODE_SIGN_IDENTITY'] = ""
             config.build_settings['CODE_SIGNING_REQUIRED'] = "NO"
             config.build_settings['CODE_SIGNING_ALLOWED'] = "NO"
-	    config.build_settings['ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES'] = 'NO'
+            config.build_settings['ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES'] = 'NO'
+        end
+    end
+    if installer.respond_to?(:generated_projects)
+        installer.generated_projects.each do |project|
+            project.targets.each do |target|
+                target.build_configurations.each do |config|
+                    config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
+                end
+            end
         end
     end
 end
