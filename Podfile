@@ -106,4 +106,21 @@ post_install do |installer|
             puts "==> Note: YYTextLayout.m patch skipped (#{e.message})"
         end
     end
+
+    # 5. 解决 Xcode 16 禁止引入系统私有头文件 netinet6/in6.h 的问题 (SJReachability 等)
+    Dir.glob("#{pods_root}/**/*.{m,mm,h}").each do |file|
+        begin
+            if File.exist?(file)
+                content = File.read(file)
+                if content.include?("<netinet6/in6.h>")
+                    File.chmod(0644, file)
+                    patched = content.gsub(/#import\s*<netinet6\/in6\.h>/, '// #import <netinet6/in6.h>')
+                    File.write(file, patched)
+                    puts "==> Successfully patched netinet6/in6.h in #{File.basename(file)}"
+                end
+            end
+        rescue => e
+            # ignore
+        end
+    end
 end
