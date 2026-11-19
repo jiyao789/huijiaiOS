@@ -226,15 +226,6 @@
 		03501EFB2726B77200A0CADE /* MyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03501EFA2726B77200A0CADE /* MyHeaderView.m */; };
 		03501EFD2726B78800A0CADE /* MyHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03501EFC2726B78800A0CADE /* MyHeaderView.xib */; };
 		0350CAC424AF22D800B8E909 /* .gitIgnore in Resources */ = {isa = PBXBuildFile; fileRef = 0350CA7224AF22D700B8E909 /* .gitIgnore */; };
-		0350CAC524AF22D800B8E909 /* SettingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0350CA8724AF22D700B8E909 /* SettingsTableViewCell.m */; };
-		0350CAC624AF22D800B8E909 /* DetailInputTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0350CA8824AF22D700B8E909 /* DetailInputTableViewCell.m */; };
-		0350CAC724AF22D800B8E909 /* AudioInputStream.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0350CA8924AF22D700B8E909 /* AudioInputStream.mm */; };
-		0350CAC824AF22D800B8E909 /* AudioDataQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0350CA9024AF22D700B8E909 /* AudioDataQueue.cpp */; };
-		0350CAC924AF22D800B8E909 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0350CA9324AF22D700B8E909 /* SettingsTableViewController.m */; };
-		0350CACA24AF22D800B8E909 /* BDVRSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0350CA9424AF22D700B8E909 /* BDVRSettings.m */; };
-		0350CACB24AF22D800B8E909 /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0350CA9624AF22D700B8E909 /* DetailTableViewController.m */; };
-		0350CACC24AF22D800B8E909 /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0350CA9724AF22D700B8E909 /* DetailTableViewCell.m */; };
-		0350CACD24AF22D800B8E909 /* BDVRSettingsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0350CA9824AF22D700B8E909 /* BDVRSettingsItem.m */; };
 		0350CACE24AF22D800B8E909 /* 8k_test.pcm in Resources */ = {isa = PBXBuildFile; fileRef = 0350CA9A24AF22D700B8E909 /* 8k_test.pcm */; };
 		0350CACF24AF22D800B8E909 /* bds_license.dat in Resources */ = {isa = PBXBuildFile; fileRef = 0350CA9D24AF22D700B8E909 /* bds_license.dat */; };
 		0350CAD024AF22D800B8E909 /* bds_easr_basic_model.dat in Resources */ = {isa = PBXBuildFile; fileRef = 0350CA9E24AF22D700B8E909 /* bds_easr_basic_model.dat */; };
@@ -4188,20 +4179,15 @@
 				033F5283272101B30088CAF6 /* HouseSearchViewController.m in Sources */,
 				03144FA32253469A00B90383 /* UIImage-Extensions.m in Sources */,
 				E5639CF22407585500930279 /* NSString+MLLabel.m in Sources */,
-				0350CACD24AF22D800B8E909 /* BDVRSettingsItem.m in Sources */,
 				035669122BB7D905007A8709 /* BigHouseModel.m in Sources */,
 				03E01403272008CC007A6520 /* RegionTableViewCell.m in Sources */,
 				E5D8B61623D05D8400BF99E3 /* UIView+SDExtension.m in Sources */,
 				03BA20261117000300CEAEF3 /* AgreementUpdateAlertView.m in Sources */,
 				03B91A5C2815524D00CEAEF8 /* ContractWarnView.m in Sources */,
-				0350CACB24AF22D800B8E909 /* DetailTableViewController.m in Sources */,
-				0350CAC824AF22D800B8E909 /* AudioDataQueue.cpp in Sources */,
 				033062CD272BC7A100FFFD91 /* SurrenderTimeView.m in Sources */,
 				039074AF2B2BE9AD00212AC3 /* WaitExistModel.m in Sources */,
 				03C53C44254FEF900013B6EA /* MusicDownLoadManager.m in Sources */,
-				0350CAC624AF22D800B8E909 /* DetailInputTableViewCell.m in Sources */,
 				0388F24D253EBF9500C6FBD9 /* KNPhotoBaseCell.m in Sources */,
-				0350CACA24AF22D800B8E909 /* BDVRSettings.m in Sources */,
 				03A05AB6272FCA46009036D0 /* ActivityListModel.m in Sources */,
 				03AFA08227362B830037AA3A /* LockDetailModel.m in Sources */,
 				03C82E7825554D0F008FC138 /* OpenPageManager.m in Sources */,
@@ -4223,7 +4209,6 @@
 				03FB707E25664F5A000E2621 /* YBWaterFlowLayout.m in Sources */,
 				E5D8B61923D05D8400BF99E3 /* TAPageControl.m in Sources */,
 				03991F642918B28900AB767D /* VRSeeHouseViewController.m in Sources */,
-				0350CAC524AF22D800B8E909 /* SettingsTableViewCell.m in Sources */,
 				03144E042253420F00B90383 /* ViewController.m in Sources */,
 				E5639CF62407585500930279 /* MLTextAttachment.m in Sources */,
 				03144FA82253469A00B90383 /* NSDate+SNFoundation.m in Sources */,
@@ -4255,7 +4240,6 @@
 				034466462815097C002A9989 /* PlayPhoneCollectionViewCell.m in Sources */,
 				E5ABE3FA2422693900A076B6 /* TZImageManager.m in Sources */,
 				0347A29127253A7700D648F8 /* SeeHouseDateCollectionViewCell.m in Sources */,
-				0350CACC24AF22D800B8E909 /* DetailTableViewCell.m in Sources */,
 				0381A8DF2726825B00DCADF1 /* SpaceAppointmentTableViewCell.m in Sources */,
 				0317B54527213E3700E12BAF /* ContractMessageTableViewCell.m in Sources */,
 				031E64AA27352140003D9778 /* ElectricDetailModel.m in Sources */,
@@ -4335,7 +4319,6 @@
 				032EFAFD27391C78007E7BE4 /* SearchHistoryHeaderView.m in Sources */,
 				03144F9B2253469A00B90383 /* StringHelper.m in Sources */,
 				03A80DFD27225B2400BE4F64 /* WorkOrderEvaluateTableViewCell.m in Sources */,
-				0350CAC924AF22D800B8E909 /* SettingsTableViewController.m in Sources */,
 				03178B522746495B00C43A06 /* HouseMapListModel.m in Sources */,
 				0340832B27243BDB0048139F /* CancelReserveViewController.m in Sources */,
 				03E013FD272006A5007A6520 /* ChooseLocationView.m in Sources */,
@@ -4343,7 +4326,6 @@
 				031450122253469A00B90383 /* ScottNormalAnimation.m in Sources */,
 				03501EFB2726B77200A0CADE /* MyHeaderView.m in Sources */,
 				0327CB052B244D8D0084E0D2 /* HouseBannerTableViewCell.m in Sources */,
-				0350CAC724AF22D800B8E909 /* AudioInputStream.mm in Sources */,
 				038268D0254A5CDD001E6E2D /* BaseNavigationViewController.m in Sources */,
 				031791172C85679800B0097B /* RechargeRecodeTitleTableViewCell.m in Sources */,
 				0317B54F272142B400E12BAF /* WorkOrderMessageTableViewCell.m in Sources */,
