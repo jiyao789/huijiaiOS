@@ -268,7 +268,6 @@
 		0350CAEC24AF22D800B8E909 /* Chinese_Text.dat in Resources */ = {isa = PBXBuildFile; fileRef = 0350CABE24AF22D700B8E909 /* Chinese_Text.dat */; };
 		0350CAED24AF22D800B8E909 /* Chinese_Speech_Female.dat in Resources */ = {isa = PBXBuildFile; fileRef = 0350CABF24AF22D700B8E909 /* Chinese_Speech_Female.dat */; };
 		0350CAEE24AF22D800B8E909 /* 16k_test.pcm in Resources */ = {isa = PBXBuildFile; fileRef = 0350CAC024AF22D700B8E909 /* 16k_test.pcm */; };
-		0350CAEF24AF22D800B8E909 /* libBaiduSpeechSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0350CAC224AF22D700B8E909 /* libBaiduSpeechSDK.a */; };
 		0353934227BCEFDA00CA26B4 /* OwnerAddressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0353934127BCEFDA00CA26B4 /* OwnerAddressView.m */; };
 		0353934427BCEFF100CA26B4 /* OwnerAddressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0353934327BCEFF100CA26B4 /* OwnerAddressView.xib */; };
 		035669122BB7D905007A8709 /* BigHouseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 035669112BB7D905007A8709 /* BigHouseModel.m */; };
@@ -1105,7 +1104,6 @@
 		0350CABE24AF22D700B8E909 /* Chinese_Text.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chinese_Text.dat; sourceTree = "<group>"; };
 		0350CABF24AF22D700B8E909 /* Chinese_Speech_Female.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chinese_Speech_Female.dat; sourceTree = "<group>"; };
 		0350CAC024AF22D700B8E909 /* 16k_test.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = 16k_test.pcm; sourceTree = "<group>"; };
-		0350CAC224AF22D700B8E909 /* libBaiduSpeechSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBaiduSpeechSDK.a; sourceTree = "<group>"; };
 		0353934027BCEFDA00CA26B4 /* OwnerAddressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OwnerAddressView.h; sourceTree = "<group>"; };
 		0353934127BCEFDA00CA26B4 /* OwnerAddressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OwnerAddressView.m; sourceTree = "<group>"; };
 		0353934327BCEFF100CA26B4 /* OwnerAddressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OwnerAddressView.xib; sourceTree = "<group>"; };
@@ -1745,7 +1743,6 @@
 				03EE39152265B2BB001C7CDB /* MediaPlayer.framework in Frameworks */,
 				03EE39112265B28D001C7CDB /* UIKit.framework in Frameworks */,
 				03591A6E272E7A550048A0C2 /* CoreMotion.framework in Frameworks */,
-				0350CAEF24AF22D800B8E909 /* libBaiduSpeechSDK.a in Frameworks */,
 				03EE390F2265B285001C7CDB /* libresolv.tbd in Frameworks */,
 				03EE390D2265B27B001C7CDB /* libiconv.tbd in Frameworks */,
 				03EE390B2265B263001C7CDB /* CoreGraphics.framework in Frameworks */,
@@ -2787,7 +2784,6 @@
 				0350CA6D24AF22D700B8E909 /* BDSClientHeaders */,
 				0350CA8624AF22D700B8E909 /* ASRSetting */,
 				0350CA9924AF22D700B8E909 /* BDSClientResource */,
-				0350CAC124AF22D700B8E909 /* BDSClientLib */,
 			);
 			path = BDSClient;
 			sourceTree = "<group>";
@@ -2955,14 +2951,6 @@
 				0350CABF24AF22D700B8E909 /* Chinese_Speech_Female.dat */,
 			);
 			path = TTS;
-			sourceTree = "<group>";
-		};
-		0350CAC124AF22D700B8E909 /* BDSClientLib */ = {
-			isa = PBXGroup;
-			children = (
-				0350CAC224AF22D700B8E909 /* libBaiduSpeechSDK.a */,
-			);
-			path = BDSClientLib;
 			sourceTree = "<group>";
 		};
 		03591A69272E77BD0048A0C2 /* WXApiManager */ = {
@@ -4743,7 +4731,6 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/StandardApplication/Libs/BDSClient/BDSClientLib",
 				);
 				MARKETING_VERSION = 3.1.10;
 				OTHER_LDFLAGS = (
@@ -4911,7 +4898,6 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/StandardApplication/Libs/BDSClient/BDSClientLib",
 				);
 				MARKETING_VERSION = 3.1.10;
 				OTHER_LDFLAGS = (
