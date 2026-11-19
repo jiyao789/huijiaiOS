@@ -92,13 +92,18 @@ post_install do |installer|
     # 4. 自动修补 YYTextLayout.m 中的链式比较 bug
     pods_root = installer.sandbox.root.to_s
     Dir.glob("#{pods_root}/**/YYTextLayout.m").each do |file|
-        if File.exist?(file)
-            content = File.read(file)
-            patched = content.gsub(/fabs\(([^)]+)\)\s*<\s*fabs\(([^)]+)\)\s*<\s*\((right\s*\?\s*prev\s*:\s*next)\)/, '(fabs(\1) < fabs(\2)) ? prev : next')
-            if patched != content
-                File.write(file, patched)
-                puts "==> Successfully patched YYTextLayout.m chained comparison bug"
+        begin
+            if File.exist?(file)
+                File.chmod(0644, file)
+                content = File.read(file)
+                patched = content.gsub(/fabs\(([^)]+)\)\s*<\s*fabs\(([^)]+)\)\s*<\s*\((right\s*\?\s*prev\s*:\s*next)\)/, '(fabs(\1) < fabs(\2)) ? prev : next')
+                if patched != content
+                    File.write(file, patched)
+                    puts "==> Successfully patched YYTextLayout.m chained comparison bug"
+                end
             end
+        rescue => e
+            puts "==> Note: YYTextLayout.m patch skipped (#{e.message})"
         end
     end
 end
