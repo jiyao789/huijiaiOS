@@ -4847,7 +4847,6 @@
 					"\"WebKit\"",
 					"-framework",
 					"\"alivcffmpeg\"",
-					"-ld64",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wdit.hzapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -5013,7 +5012,6 @@
 					"\"WebKit\"",
 					"-framework",
 					"\"alivcffmpeg\"",
-					"-ld64",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wdit.hzapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
