@@ -79,7 +79,10 @@
     [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"TabBarControllerNotification" object:nil userInfo:nil]];
     
     //点击tabBarItem动画
-    [self tabBarButtonClick:[self getTabBarButton]];
+    UIControl *button = [self getTabBarButton];
+    if (button) {
+        [self tabBarButtonClick:button];
+    }
 
     if (tabBarController.selectedIndex == 3) {
         self.selectedIndex = self.shouldSelectIndex;
@@ -118,18 +121,35 @@
     return YES;
 }
 
-- (UIControl *)getTabBarButton{
-    if (self.tabBarButtons.count > 0) {
-        [self.tabBarButtons removeAllObjects];
-    }
-    for (UIView *tabBarButton in self.tabBar.subviews) {
-        if ([tabBarButton isKindOfClass:NSClassFromString(@"UITabBarButton")]){
-            [self.tabBarButtons addObject:tabBarButton];
+- (void)findTabBarButtonsInView:(UIView *)view {
+    for (UIView *subview in view.subviews) {
+        if ([subview isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
+            [self.tabBarButtons addObject:subview];
+        } else if (subview.subviews.count > 0) {
+            [self findTabBarButtonsInView:subview];
         }
     }
-    UIControl *tabBarButton = [self.tabBarButtons objectAtIndex:self.selectedIndex];
+}
+
+- (UIControl *)getTabBarButton {
+    [self.tabBarButtons removeAllObjects];
+    [self findTabBarButtonsInView:self.tabBar];
     
-    return tabBarButton;
+    // 按水平位置从左往右排序，确保索引顺序与 Tab 一致
+    [self.tabBarButtons sortUsingComparator:^NSComparisonResult(UIView *obj1, UIView *obj2) {
+        if (obj1.frame.origin.x < obj2.frame.origin.x) {
+            return NSOrderedAscending;
+        } else if (obj1.frame.origin.x > obj2.frame.origin.x) {
+            return NSOrderedDescending;
+        }
+        return NSOrderedSame;
+    }];
+    
+    if (self.selectedIndex >= 0 && self.selectedIndex < self.tabBarButtons.count) {
+        return [self.tabBarButtons objectAtIndex:self.selectedIndex];
+    }
+    
+    return nil;
 }
 
 - (void)tabBarButtonClick:(UIControl *)tabBarButton
