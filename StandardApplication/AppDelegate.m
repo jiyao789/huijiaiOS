@@ -243,14 +243,7 @@ static void UncaughtExceptionHandler(NSException *exception) {
 
 - (void)configMapApiKey
 {
-    AMapServices *services = [AMapServices sharedServices];
-    if ([services respondsToSelector:@selector(updatePrivacyShow:privacyInfo:)]) {
-        [services updatePrivacyShow:AMapPrivacyShowStatusDidShow privacyInfo:AMapPrivacyInfoStatusDidContain];
-    }
-    if ([services respondsToSelector:@selector(updatePrivacyAgree:)]) {
-        [services updatePrivacyAgree:AMapPrivacyAgreeStatusDidAgree];
-    }
-    services.apiKey = MapApiKey;
+    [AMapServices sharedServices].apiKey = MapApiKey;
 }
 
 
