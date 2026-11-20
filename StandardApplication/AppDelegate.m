@@ -34,10 +34,21 @@ static NSString *const MapApiKey = @"40ec7df263df9014c185bcd45a4e8f03";
 
 @end
 
+static void UncaughtExceptionHandler(NSException *exception) {
+    NSArray *callStack = [exception callStackSymbols];
+    NSString *reason = [exception reason];
+    NSString *name = [exception name];
+    NSString *crashInfo = [NSString stringWithFormat:@"\n======== CRASH EXCEPTION ========\nName: %@\nReason: %@\nCallStack:\n%@\n=================================\n", name, reason, [callStack componentsJoinedByString:@"\n"]];
+    NSLog(@"%@", crashInfo);
+}
+
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // 注册全局未捕获异常捕获，便于定位运行时崩溃堆栈
+    NSSetUncaughtExceptionHandler(&UncaughtExceptionHandler);
+    
     // Override point for customization after application launch.
     
     SDImageWebPCoder *webPCoder = [SDImageWebPCoder sharedCoder];
@@ -232,8 +243,14 @@ static NSString *const MapApiKey = @"40ec7df263df9014c185bcd45a4e8f03";
 
 - (void)configMapApiKey
 {
-    [AMapServices sharedServices].apiKey = MapApiKey;
-    [AMapServices sharedServices].apiKey = MapApiKey;
+    AMapServices *services = [AMapServices sharedServices];
+    if ([services respondsToSelector:@selector(updatePrivacyShow:privacyInfo:)]) {
+        [services updatePrivacyShow:AMapPrivacyShowStatusDidShow privacyInfo:AMapPrivacyInfoStatusDidContain];
+    }
+    if ([services respondsToSelector:@selector(updatePrivacyAgree:)]) {
+        [services updatePrivacyAgree:AMapPrivacyAgreeStatusDidAgree];
+    }
+    services.apiKey = MapApiKey;
 }
 
 

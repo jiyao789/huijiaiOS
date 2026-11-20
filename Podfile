@@ -61,9 +61,6 @@ post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|
             config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
-            config.build_settings['EXPANDED_CODE_SIGN_IDENTITY'] = ""
-            config.build_settings['CODE_SIGNING_REQUIRED'] = "NO"
-            config.build_settings['CODE_SIGNING_ALLOWED'] = "NO"
             config.build_settings['ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES'] = 'NO'
 
             # 屏蔽第三方老库在 Xcode 16 下的括号/链式比较语法警告阻断
@@ -72,6 +69,14 @@ post_install do |installer|
             c_flags << '-Wno-error=parentheses' unless c_flags.include?('-Wno-error=parentheses')
             c_flags << '-Wno-parentheses' unless c_flags.include?('-Wno-parentheses')
             config.build_settings['OTHER_CFLAGS'] = c_flags
+        end
+
+        # 仅针对资源 Bundle Target 关闭代码签名，避免 Xcode 14+ 签名报错；绝不关闭普通 Framework/库的签名
+        if target.respond_to?(:product_type) and target.product_type == "com.apple.product-type.bundle"
+            target.build_configurations.each do |config|
+                config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
+                config.build_settings['CODE_SIGNING_REQUIRED'] = 'NO'
+            end
         end
     end
 
